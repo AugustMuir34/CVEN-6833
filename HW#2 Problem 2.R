@@ -92,6 +92,9 @@ map('world',wrap=c(0,360),add=TRUE,resolution=0,lwd=2)
 grid()
 title(main="Estimates from Logistic Regression Model")
 
+anova(bestmod)
+
+
 ### you can plot the ypmod$se.fit for the standard error
 quilt.plot(xdata$lon, xdata$lat, ypmod$se.fit, ylim=c(5,40), col=myPalette9(200),zlim=c(0,1))
 map('world',wrap=c(0,360),add=TRUE,resolution=0,lwd=2)
@@ -171,3 +174,4 @@ title(main="Standard Error estimates from Spatial Logistic Regression Model")
 
 #### Compare
 
+anova()
